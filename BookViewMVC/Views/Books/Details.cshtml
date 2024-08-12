@@ -1,0 +1,11 @@
+﻿@model BookViewMVC.Models.Book
+
+<h1>@Model.Title</h1>
+
+<div>
+    <h3>Author: @Model.Author</h3>
+    <p><strong>Genre:</strong> @Model.Genre</p>
+    <p><strong>Year:</strong> @Model.Year</p>
+</div>
+
+<a class="btn btn-secondary" href="@Url.Action("Index", "Books")">Back to List</a>

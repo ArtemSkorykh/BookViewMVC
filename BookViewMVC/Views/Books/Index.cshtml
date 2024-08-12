@@ -1,0 +1,15 @@
+﻿@model IEnumerable<BookViewMVC.Models.Book>
+
+<h1>Book Library</h1>
+
+<table class="table">
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td><a class="btn btn-primary" href="@Url.Action("Details", "Books", new { id = book.Id })">View Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
