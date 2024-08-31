@@ -1,0 +1,34 @@
+﻿@model BookViewMVC.Models.Book
+
+<h2>Edit Book</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label style="margin-right: 140px;">Title</label>
+        <input type="text" asp-for="Title" />
+    </div>
+    <div>
+        <label style="margin-right: 121px;">Author</label>
+        <input type="text" asp-for="Author" />
+    </div>
+    <div>
+        <label style="margin-right: 128px;">Genre</label>
+        <input type="text" asp-for="Genre" />
+    </div>
+    <div>
+        <label style="margin-right: 107px;">Publisher</label>
+        <input type="text" asp-for="Publisher" />
+    </div>
+    <div>
+        <label style="margin-right: 142px;">Year</label>
+        <input type="number" asp-for="Year" />
+    </div>
+    <div>
+        <label style="margin-right: 50px;">Cover Image URL</label>
+        <input type="text" asp-for="CoverImage" />
+    </div>
+    <button type="submit">Save Changes</button>
+</form>
+
+<a href="@Url.Action("Index", "Books")">Back to List</a>

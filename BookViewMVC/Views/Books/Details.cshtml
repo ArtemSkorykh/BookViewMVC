@@ -6,6 +6,12 @@
     <h3>Author: @Model.Author</h3>
     <p><strong>Genre:</strong> @Model.Genre</p>
     <p><strong>Year:</strong> @Model.Year</p>
+    <p><strong>Publisher:</strong> @Model.Publisher</p>
+    <p><img src="@Model.CoverImage" alt="Title" width="100" /></p>
+    <td>
+        <P></P>
+        <a href="@Url.Action("Edit", "Books", new { id = @Model.Id })">Edit</a>
+    </td>
 </div>
 
 <a class="btn btn-secondary" href="@Url.Action("Index", "Books")">Back to List</a>

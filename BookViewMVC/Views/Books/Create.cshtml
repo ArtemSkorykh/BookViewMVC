@@ -1,0 +1,33 @@
+﻿@model BookViewMVC.Models.Book
+
+<h2>Add a New Book</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Title</label>
+        <input type="text" asp-for="Title" />
+    </div>
+    <div>
+        <label>Author</label>
+        <input type="text" asp-for="Author" />
+    </div>
+    <div>
+        <label>Genre</label>
+        <input type="text" asp-for="Genre" />
+    </div>
+    <div>
+        <label>Publisher</label>
+        <input type="text" asp-for="Publisher" />
+    </div>
+    <div>
+        <label>Year</label>
+        <input type="number" asp-for="Year" />
+    </div>
+    <div>
+        <label>Cover Image URL</label>
+        <input type="text" asp-for="CoverImage" />
+    </div>
+    <button type="submit">Add Book</button>
+</form>
+
+<a href="@Url.Action("Index", "Books")">Back to List</a>
